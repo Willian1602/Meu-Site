@@ -1,0 +1,200 @@
+:root{
+    --background-color: #DAEEF3;
+    --border-color: rgba(0, 0, 0, .7);
+    --hover-color: brown;
+    --bg-color-container:rgba(255, 255, 255, .5);
+}
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    padding: 0px;
+    margin: 0;
+    border: none;
+}
+
+/*____________________________________CABEÇALHO______________________________*/
+
+.Menu{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    padding: 0px 20px;
+}
+
+.Container-Menu{
+    align-items: center;
+    display: flex;
+}
+
+.Container-Menu p{
+    margin-left: 20px;
+    font-size: 1.7rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.Container-Menu img{
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    margin-top: 3px;
+    border: 2px solid var(--border-color);
+}
+
+.Container-Navegação{
+    width: 300px;
+}
+
+.Container-Navegação ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Menu-item{
+    list-style: none;
+}
+
+.Menu-item a:hover{
+    color: var(--hover-color);
+    cursor: pointer;
+}
+
+.Menu-item a{
+    color: black;
+    text-decoration: none;
+}
+
+.hamburguer{
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    font-size: 28px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburguer .Hamburguer-Menu, .hamburguer .Menu-item{
+    display: none;
+}
+
+.hamburguer .Menu-item{
+    font-size: 12px;
+}
+
+/*_______________________________CORPO SITE__________________________________*/
+.Container-Corpo{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    margin: 0;
+    position: relative;
+}
+
+.Container-Corpo::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: url("./Photos/Img1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .25;
+    position: absolute;
+}
+
+.Container-Corpo h2{
+    text-indent: 20px;
+    margin: 0;
+}
+
+.Container-Corpo p{
+    text-indent: 20px;
+    text-align: justify;
+    margin: 0 20px;
+    line-height: 1.5rem;
+}
+
+.Container-Corpo .Sobre-mim,
+.Container-Corpo .Formação,
+.Container-Corpo .Cursos{
+    margin-top: 20px;
+    position: relative;
+}
+
+/*________________________________RODAPÉ__________________________________*/
+.Rodapé-Conteudo a img{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.Rodapé-Conteudo p{
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+    color: white;
+    font-size: 12px;
+}
+
+.Rodapé-Conteudo{
+    padding: 10px 15px;
+    width: 100px;
+}
+
+.Rodapé-Wpp, 
+.Rodapé-In, 
+.Rodapé-Git, 
+.Rodapé-Mail{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+.Rodapé-Conteudo a{
+    text-decoration: none;
+}
+
+.Rodapé-Dir p{
+    padding-bottom: 10px;
+    margin: 0;
+    margin-left: 18px;
+    color: white;
+    font-size: 9px;
+}
+
+.Rodapé{
+    background-color: black;
+}
+
+/*______________________________RESPONSIVIDADE_____________________________*/
+@media screen and (max-width: 761px) {
+    .Container-Navegação{
+        display: none;
+    }
+
+    .hamburguer .Hamburguer-Menu{
+        display: block;
+    }
+
+    .hamburguer .Menu-item.active{
+        display: block;
+    }
+}
+
+@media  screen and (max-width: 510px) {
+    .Container-Menu p{
+        margin-left: 20px;
+        font-size: 1.3rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+    
+}
